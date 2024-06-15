@@ -1,0 +1,18 @@
+<h1>Listado Pokemon</h1>
+<p>Tenemos un total de {{conteo}} pokemons</p>
+
+<div *ngFor="let pokemon of pokemons">
+    <a href={{pokemon.url}}>{{pokemon.name}}</a>
+</div>
+
+<div *ngFor="let pokemon of detallesPokemon">
+    <h2>{{pokemon.id}} - {{pokemon.name}}</h2>
+    <img src={{pokemon.sprites.front_default}} alt=""/>  
+</div>
+
+<div *ngFor="let pokemon of abilitysPokemon">
+    <h2>{{pokemon.apiUrlAbility}} - {{pokemon.abilities}}</h2>
+    <img src={{pokemon.sprites.front_default}} alt=""/>  
+</div>
+
+<button (click)="agregarNotificacion()">Agregar </button>
